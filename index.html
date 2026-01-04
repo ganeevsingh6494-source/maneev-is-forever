@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maneev is Forever 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', 'Poppins', cursive;
+    background: linear-gradient(135deg, #ffd6e8, #e0f7ff);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff4d88;
+}
+
+h2 {
+    color: #ff6fa5;
+}
+
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+img {
+    border-radius: 20px;
+    margin: 10px;
+    width: 250px;
+}
+
+button {
+    background: #ff4d88;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff2f73;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 24px;
+    animation: floatUp 6s linear infinite;
+    color: #ff4d88;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+footer {
+    padding: 20px;
+    color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Maneev is Forever 💕</h1>
+    <p><strong>Ganeev & Mansirat Kaur</strong></p>
+    <p>Our journey began on <strong>5th January 2023</strong></p>
+</header>
+
+<section>
+
+<!-- Anniversary Message -->
+<div class="card">
+    <h2>Happy 2nd Anniversary 🥰</h2>
+    <p>
+        Two years of love, laughter, silly fights and beautiful memories.
+        From day one we became <strong>Maneev</strong> — a promise, a bond, a forever ♾️
+    </p>
+</div>
+
+<!-- Photo Gallery -->
+<div class="card">
+    <h2>Our Beautiful Memories 📸</h2>
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <p>Every picture holds my heart 💖</p>
+</div>
+
+<!-- Love Letter -->
+<div class="card">
+    <h2>A Cute Letter 💌</h2>
+    <p>
+        My Dearest Mansirat,<br><br>
+        From 5th January 2023 till today, every moment with you feels special.
+        You are my happiness, my peace, my safe place.
+        I promise to love you, choose you, and annoy you forever 😄💗<br><br>
+        Yours always,<br>
+        <strong>Ganeev</strong>
+    </p>
+</div>
+
+<!-- I Love You Button -->
+<div class="card">
+    <h2>One Thing I’ll Say Forever 💞</h2>
+    <button onclick="loveMessage()">I Love You 💖</button>
+</div>
+
+<!-- Prank Game -->
+<div class="card">
+    <h2>Cute Prank Game 😜</h2>
+    <button onclick="startGame()">Start Game</button>
+    <p id="gameText"></p>
+</div>
+
+</section>
+
+<footer>
+    Made with endless love 💕<br>
+    Maneev is Forever ♾️
+</footer>
+
+<script>
+/* Floating hearts */
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHeart, 500);
+
+/* Love button */
+function loveMessage() {
+    alert("I love you so much Mansirat 💕\nYou are my forever, my Maneev ♾️\nHappy 2nd Anniversary 😘");
+}
+
+/* Prank game */
+function startGame() {
+    document.getElementById("gameText").innerText =
+    "Who loves the other more? 😏\n\nAnswer: BOTH… but Mansirat a little more 💖😜";
+}
+</script>
+
+</body>
+</html>
